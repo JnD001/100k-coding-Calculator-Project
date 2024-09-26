@@ -132,124 +132,47 @@ public class Calculator implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==sevenButton)
         {
-            if(operatorClicked)
-            {
-                displayLabel.setText("7");
-                operatorClicked=false;
-            }
-            else{
-                displayLabel.setText(displayLabel.getText()+"7");
-            }
+            appendNumber("7");
         }
         else if(e.getSource()==eightButton)
         {
-            if(operatorClicked)
-            {
-                displayLabel.setText("8");
-                operatorClicked=false;
-            }
-            else{
-                displayLabel.setText(displayLabel.getText()+"8");
-            }
+            appendNumber("8");
         }
         else if(e.getSource()==nineButton)
         {
-            if(operatorClicked)
-            {
-                displayLabel.setText("9");
-                operatorClicked=false;
-            }
-            else{
-                displayLabel.setText(displayLabel.getText()+"9");
-            }
+            appendNumber("9");
         }
         else if(e.getSource()==fourButton)
         {
-            if(operatorClicked)
-            {
-                displayLabel.setText("4");
-                operatorClicked=false;
-            }
-            else{
-                displayLabel.setText(displayLabel.getText()+"4");
-            }
+            appendNumber("4");
         }
         else if(e.getSource()==fiveButton)
         {
-            if(operatorClicked)
-            {
-                displayLabel.setText("5");
-                operatorClicked=false;
-            }
-            else{
-                displayLabel.setText(displayLabel.getText()+"5");
-            }
+            appendNumber("5");
         }
         else if(e.getSource()==sixButton)
         {
-            if(operatorClicked)
-            {
-                displayLabel.setText("6");
-                operatorClicked=false;
-            }
-            else{
-                displayLabel.setText(displayLabel.getText()+"6");
-            }
+            appendNumber("6");
         }
         else if(e.getSource()==oneButton)
         {
-            if(operatorClicked)
-            {
-                displayLabel.setText("1");
-                operatorClicked=false;
-            }
-            else{
-                displayLabel.setText(displayLabel.getText()+"1");
-            }
+            appendNumber("1");
         }
         else if(e.getSource()==twoButton)
         {
-            if(operatorClicked)
-            {
-                displayLabel.setText("2");
-                operatorClicked=false;
-            }
-            else{
-                displayLabel.setText(displayLabel.getText()+"2");
-            }
+            appendNumber("2");
         }
         else if(e.getSource()==threeButton)
         {
-            if(operatorClicked)
-            {
-                displayLabel.setText("3");
-                operatorClicked=false;
-            }
-            else{
-                displayLabel.setText(displayLabel.getText()+"3");
-            }
+            appendNumber("3");
         }
         else if(e.getSource()==zeroButton)
         {
-            if(operatorClicked)
-            {
-                displayLabel.setText("0");
-                operatorClicked=false;
-            }
-            else{
-                displayLabel.setText(displayLabel.getText()+"0");
-            }
+            appendNumber("0");
         }
         else if(e.getSource()==dotButton)
         {
-            if(operatorClicked)
-            {
-                displayLabel.setText(".");
-                operatorClicked=false;
-            }
-            else{
-                displayLabel.setText(displayLabel.getText()+".");
-            }
+            appendNumber(".");
         }
         else if (e.getSource() == plusButton) {
             setOperator("+");
@@ -263,6 +186,18 @@ public class Calculator implements ActionListener {
             calculate();
         } else if (e.getSource() == clearButton) {
             displayLabel.setText("");
+        }
+    }
+
+    private void appendNumber(String num)
+    {
+        if(operatorClicked)
+        {
+            displayLabel.setText(num);
+            operatorClicked=false;
+        }
+        else{
+            displayLabel.setText(displayLabel.getText()+num);
         }
     }
 
